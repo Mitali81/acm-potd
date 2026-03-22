@@ -1,2 +1,15 @@
-![Uploading image.png…]()
-<img width="1831" height="817" alt="image" src="https://github.com/user-attachments/assets/4dce0dac-78e9-413a-af22-142b834f6940" />
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        for(int i = 0; i < nums.size(); i++){
+            for(int j = i + 1; j < nums.size(); ){
+                if(nums[i] == nums[j]){
+                    nums.erase(nums.begin() + j);
+                } else {
+                    j++;
+                }
+            }
+        }
+        return nums.size();
+    }
+};
